@@ -1,0 +1,10 @@
+sudo: required
+
+services:
+  - docker
+
+language: go
+
+before_install:
+  - rvm use 2.3.2 --install --binary --fuzzy
+  - gem install bundler
