@@ -11,7 +11,7 @@ module SSHServer
       options[:port]       ||= 2222
       options[:login]      ||= 'admin'
       options[:password]   ||= 'password'
-      options[:executable] ||= %w(bash)
+      options[:executable] ||= 'bash --rcfile'
 
       %w(TERM INT).each do |s|
         Signal.trap(s) do
